@@ -8,19 +8,38 @@
     = csrf_meta_tags
 
   %body
-    %header
-    .header_inner
-    = link_to "NoteToday", root_path
 
-  %nav
-    - if user_signed_in?
-      = link_to "New Note", new_note_path
-      = link_to "Sign Out", destroy_user_session_path, method: :delete
-    - else link_to "Sign In"
+    %div#wrapper
 
-  %p.notice= notice
-  %p.alert= alert
+      %div{ class: "left side-menu" }
+        %div{ class: "slimscroll-menu", id: "remove-scroll"}
+
+          %div{ class: "topbar-left"}
+
+            %a{href: "application.html.haml", class: "logo" }
+              %span
+                %img{ src: "", alt: "", height: "22" }
+              %i
+                %img{ src: "", alt: "", height: "28"}
+
+
+
+
+    -#%header
+    -#.header_inner
+    -#= link_to "NoteToday", root_path
+    -#
+    -#%nav
+    -#  - if user_signed_in?
+    -#    = link_to "New Note", new_note_path
+    -#    = link_to "Sign Out", destroy_user_session_path, method: :delete
+    -#  - else link_to "Sign In"
+    -#
+    -#%p.notice= notice
+    -#%p.alert= alert
 
   = yield
+
+
 
 
