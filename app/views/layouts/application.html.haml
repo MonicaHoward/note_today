@@ -12,16 +12,34 @@
     %div#wrapper
 
       %div{ class: "left side-menu" }
+
         %div{ class: "slimscroll-menu", id: "remove-scroll"}
 
           %div{ class: "topbar-left"}
-
             %a{href: "application.html.haml", class: "logo" }
               %span
                 %img{ src: "", alt: "", height: "22" }
               %i
                 %img{ src: "", alt: "", height: "28"}
 
+          %div{ class: "user-box"}
+            %div{ class: "user-img"}
+              %img{ src: "", alt: "user-img", title: "User Name", class: "rounded-circle img-fluid" }
+            %h5 Hello, There
+            %p Admin Head
+
+          %div{ id: "sidebar-menu"}
+            %ul{ class: "metismenu", id: "side-menu" }
+              %li
+                %a{ href: "application.html.haml" }
+                  %i{ class: "fi-air-play"}
+                  %span{ class: "badge badge-danger badge-pill pull-right" }
+                  %span Dashboard
+              %li
+                %a{ href: "javascript: void(0);" }
+                  %i{ class: "fi-layers"}
+                  %span Apps
+                  %span{ class: "menu-arrow"}
 
 
 
