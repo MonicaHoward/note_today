@@ -34,6 +34,7 @@ gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.2'
+gem "font-awesome-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

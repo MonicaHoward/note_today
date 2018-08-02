@@ -32,15 +32,101 @@
             %ul{ class: "metismenu", id: "side-menu" }
               %li
                 %a{ href: "application.html.haml" }
-                  %i{ class: "fi-air-play"}
+                  %i{ class: "fa fa-desktop"}
                   %span{ class: "badge badge-danger badge-pill pull-right" }
                   %span Dashboard
               %li
                 %a{ href: "javascript: void(0);" }
-                  %i{ class: "fi-layers"}
-                  %span Apps
-                  %span{ class: "menu-arrow"}
+                  %i{ class: "fa fa-clone"}
+                  %span Notes
+                  %i{ class: "fa fa-arrow-circle-o-right" }
 
+      %div{ class: "content-page" }
+
+        %div{ class: "topbar"}
+          %nav{ class: "navbar-custom"}
+            %ul{ class: "list-unstyled topbar-right-menu float-right mb-0" }
+              %li{ class: "fa hide-phone app-search"}
+                %form
+                  %input{ type:"text", placeholder: "Search...", class: "form-control" }
+                  %button{ type: "submit" }
+                    %i{ class: "fa fa-search" }
+
+              %li{ class: "dropdown notification-list" }
+                %a{ class: "nav-link dropdown-toggle arrow-none", href: "#", role:  "button" }
+                %i{ class: "fa fa-bell-o noti-icon" }
+                %span{ class: "badge badge-danger badge-pill noti-icon-badge" } 1
+                %div{class: "dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg"}
+
+              %li{ class: "dropdown notification-list" }
+                %a{ class: "nav-link dropdown-toggle nav-user", href: "#", role: "button"}
+                %img{ src: "#", alt: "user", class: "rounded-circle" }
+                %span{ class: "ml-1"} User Name
+                %i{ class: "fa fa-angle-down" }
+
+            %ul{ class: "list-inline menu-left mb-0" }
+              %li{ class: "float-left" }
+                %button{ class: "button-menu-mobile open-left disable-btn" }
+              %li{ class: "page-title-box" }
+                %h4{ class: "page-title" }Dashboard
+                %ol{ class: "breadcrumb" }
+                  %li{ class: "breadcrumb-item active" } Welcome to your NoteToday dashboard!
+
+          %div{ class: "content" }
+            %div{ class: "container-fluid" }
+              %div{ class: "row" }
+                %div{ class: "col-12" }
+                  %div{class: "card-box" }
+                    %h4{ class: "header-title mb-4" } Account Overview
+
+          %div{ class: "content" }
+            %div{ class: "container-fluid" }
+
+              %div{ class: "row" }
+                %div{ class: "col-12" }
+                  %div{ class: "card-box" }
+                    %h4{ class: "m-t-0 header-title" } New Note
+                    %p{ class: "text-muted m-b-30 font-14" } Type your note below. Your note must include a title and at least 3 characters
+
+                    %div{ class: "row" }
+                      %div{ class: "col-12" }
+                        %div{ class: "p-20" }
+                          %form{ class: "form-horizontal", role: "form" }
+
+                            %div{ class: "form-group row" }
+                              %label{ class: "col-2 col-form-label" } Title
+                              %div{ class: "col-10" }
+                                %input{ type: "text", class: "form-control", placeholder: "Enter a title"  }
+
+                            %div{ class: "form-group row" }
+                              %label{ class: "col-2 col-form-label" } Note
+                              %div{ class: "col-10" }
+                                %textarea{ class: "form-control", rows: "5"  }
+
+                    %div{ class: "text-right" }
+                      %button{ class: "btn btn-success waves-effects waves-light" }
+                        %span Save
+                        %i{ class: "fa fa-save m-l-5" }
+
+
+
+
+
+
+
+
+
+
+
+          %footer{ class: "footer text-center"} 2018 © Monica Howard
+
+
+        -#%ul{ class: "list-inline menu-left md-0" }
+        -#  %li{ class: "float-left" }
+        -#    %button{ class: "button-menu-mobile open-left disable-btn" }
+        -#      %i{ class: "dripicons-menu" }
+        -#    %div{ class: "page-title-box"}
+        -#      %h4{ class: "page-title-box" }
 
 
     -#%header
