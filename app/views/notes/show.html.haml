@@ -1,9 +1,17 @@
-.wrapper_with_padding
-  #note
-    %h3= @note.title
-    %p= simple_format(@note.content)
+%div{ class: "content" }
+  %div{ class: "container-fluid" }
 
-    .buttons
-      = link_to "All Notes", notes_path
-      = link_to "Edit Note",edit_note_path(@note), class: "button"
-      = link_to "Delete Note", note_path(@note), method: :delete, data: { confirm: "Are you sure?" }, class: "button"
+    %div{ class: "row" }
+      %div{ class: "col-12" }
+        %div{ class: "card-box" }
+          %p{ class: "text-success m-b-30 font-14" } Congratulations! Your note was saved!
+          %hr
+          %h4{ class: "m-t-0 header-title" } Note
+          %h3= @note.title
+          %p= simple_format(@note.content)
+          %hr
+          .buttons
+            = link_to "Create New Note", new_note_path, class: "btn btn-success waves-light waves-effect"
+            = link_to "All Notes", notes_path, class: "btn btn-outline-primary waves-light waves-effect"
+            = link_to "Edit Note",edit_note_path(@note), class: "btn btn-outline-warning waves-light waves-effect"
+            = link_to "Delete Note", note_path(@note), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger waves-light waves-effect"

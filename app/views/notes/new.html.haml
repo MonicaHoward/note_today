@@ -10,32 +10,6 @@
           %div{ class: "row" }
             %div{ class: "col-12" }
               %div{ class: "p-20" }
-                %form{ class: "form-horizontal", role: "form" }
-
-                  %div{ class: "form-group row" }
-                    %label{ class: "col-2 col-form-label" } Title
-                    %div{ class: "col-10" }
-                      %input{ type: "text", class: "form-control", placeholder: "Enter a title"  }
-
-                  %div{ class: "form-group row" }
-                    %label{ class: "col-2 col-form-label" } Note
-                    %div{ class: "col-10" }
-                      %textarea{ class: "form-control", rows: "5"  }
-
-          %div{ class: "text-right" }
-            %button{ class: "btn btn-success waves-effects waves-light" }
-              %span Save
-              %i{ class: "fa fa-save m-l-5" }
-
-    %div{ class: "row" }
-      %div{ class: "col-12" }
-        %div{ class: "card-box" }
-          %h4{ class: "m-t-0 header-title" } New Note
-          %p{ class: "text-muted m-b-30 font-14" } Type your note below. Your note must include a title and at least 3 characters
-
-          %div{ class: "row" }
-            %div{ class: "col-12" }
-              %div{ class: "p-20" }
               = simple_form_for @note do |f|
                 %f.form{ class: "form-horizontal", role: "form" }
                   %div{ class: "form-group row" }
@@ -50,9 +24,8 @@
                       = f.input :content, class: "form-control", rows: "5"
 
                     %div{ class: "text-right" }
-                      = button_to "submit", class: "btn btn-success waves-effects waves-light"
-                      %span Save
-                      %i{ class: "fa fa-save m-l-5" }
+                      = button_to "Save", type: "button", class: "btn btn-success waves-effects waves-light a fa-save m-l-5"
+
 
 
 
