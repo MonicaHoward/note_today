@@ -41,50 +41,13 @@
                   %span Notes
                   %i{ class: "fa fa-arrow-circle-o-right" }
 
-      %div{ class: "content-page" }
-
-        %div{ class: "content" }
-          %div{ class: "container-fluid" }
-            %div{ class: "row" }
-              %div{ class: "col-12" }
-                %div{class: "card-box" }
-                  %h4{ class: "header-title mb-4" } Account Overview
-
-      %div{ class: "content-page" }
-
-        %div{ class: "content" }
-          %div{ class: "container-fluid" }
-
-            %div{ class: "row" }
-              %div{ class: "col-12" }
-                %div{ class: "p-20" }
-
-
-
-
-
-
-
-        -#%ul{ class: "list-inline menu-left md-0" }
-        -#  %li{ class: "float-left" }
-        -#    %button{ class: "button-menu-mobile open-left disable-btn" }
-        -#      %i{ class: "dripicons-menu" }
-        -#    %div{ class: "page-title-box"}
-        -#      %h4{ class: "page-title-box" }
-
-
-    -#%header
-    -#.header_inner
-    -#= link_to "NoteToday", root_path
-    -#
-    -#%nav
-    -#  - if user_signed_in?
-    -#    = link_to "New Note", new_note_path
-    -#    = link_to "Sign Out", destroy_user_session_path, method: :delete
-    -#  - else link_to "Sign In"
-    -#
-    -#%p.notice= notice
-    -#%p.alert= alert
+%div{ class: "content-page" }
+  %div{ class: "content" }
+    %div{ class: "container-fluid" }
+      %div{ class: "row" }
+        %div{ class: "col-12" }
+          %div{class: "card-box" }
+            %h4{ class: "header-title mb-4" } Account Overview
 
   = yield
 
