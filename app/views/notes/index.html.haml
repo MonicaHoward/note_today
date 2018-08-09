@@ -4,25 +4,32 @@
       %div{ class: "col-lg-12" }
         %div{ class: "card-box" }
           %h4{ class: "m-t-0 header-title" } All Notes
-          %hr
-            %table{ class: "table" }
-              %thead
+          %table{ class: "table table-striped" }
+            %thead
               %tr
                 %th Date Created
                 %th Note Title
                 %th Note Snippet
                 %th Word Count
                 %th Read Time
+              %tbody
                 - unless @notes.blank?
                   - @notes.each do |note|
-                    %a{ href: (url_for [note])}
+                    %tr{scope: "row"}
                       .note
-                        %p.title= note.title
-                        %p.date= time_ago_in_words (note.created_at)
-                        %p.content= truncate(note.content, length: 50)
-                - else
-                  %h2 Create Doc !
-                  %p Start Creating Documents and Organizing Your Life!
-                  %button= link_to "New Note", new_note_path
-
-
+                        %td #{time_ago_in_words (note.created_at)} ago
+                        %td #{link_to note.title}
+                        %td #{truncate(note.content, length: 50)}
+                        - word_count = note.content.scan(/\w+/).size
+                        %td #{word_count}
+                        - if time_to_read = word_count / 60 < 1
+                          %td Less than a minute
+                        - else
+                          %td #{time_to_read} minutes
+                -#
+                -#-#- else
+                -#-#  %h2 Create Doc !
+                -#-#  %p Start Creating Documents and Organizing Your Life!
+                -#-#  %button= link_to "New Note", new_note_path
+                -#-#
+                -#
