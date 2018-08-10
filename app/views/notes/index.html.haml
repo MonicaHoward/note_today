@@ -12,13 +12,14 @@
                 %th Note Snippet
                 %th Word Count
                 %th Read Time
+                %th Actions
               %tbody
                 - unless @notes.blank?
                   - @notes.each do |note|
                     %tr{scope: "row"}
                       .note
                         %td #{time_ago_in_words (note.created_at)} ago
-                        %td #{link_to note.title}
+                        %td #{link_to note.title, note_path(:id), method: :show }
                         %td #{truncate(note.content, length: 50)}
                         - word_count = note.content.scan(/\w+/).size
                         %td #{word_count}
@@ -26,6 +27,7 @@
                           %td Less than a minute
                         - else
                           %td #{time_to_read} minutes
+                        %td #{link_to "Edit Note", edit_note_path(:id), class: "btn btn-outline-warning waves-light waves-effect"} #{link_to "Delete Note", note_path(:id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger waves-light waves-effect"}
         %div{ class: "container-fluid" }
           %div{ class: "row" }
             .buttons
