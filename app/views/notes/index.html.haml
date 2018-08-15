@@ -32,6 +32,3 @@
           %div{ class: "row" }
             .buttons
               = link_to "Create New Note", new_note_path, class: "btn btn-success waves-light waves-effect"
-              = link_to "Edit Note", edit_note_path(:id), class: "btn btn-outline-warning waves-light waves-effect"
-              = link_to "Delete Note", note_path(:id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger waves-light waves-effect"
-
