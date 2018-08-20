@@ -9,19 +9,20 @@
               %div{ class: "card-box widget-flat border-custom bg-custom text-white" }
                 %i{ class: "fa fa-hashtag" }
                 %h3{ class: "m-b-10" } Total Notes
-                %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
+                %p{ class: "text-uppercase m-b-5 font-13 font-600" } #{@notes.count}
             %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
               %div{ class: "card-box bg-primary widget-flat border-primary text-white" }
                 %i{ class: "fa fa-hashtag" }
                 %h3{ class: "m-b-10" } Total Word Count
-                %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
+                %p{ class: "text-uppercase m-b-5 font-13 font-600" }
             %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
               %div{ class: "card-box widget-flat border-success bg-success text-white" }
                 %i{ class: "fa fa-hashtag" }
                 %h3{ class: "m-b-10" } Most Words
-                %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
+                - @notes.map.with_index{|n, i| }
+                %p{ class: "text-uppercase m-b-5 font-13 font-600" } n/a
             %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
               %div{ class: "card-box widget-flat border-custom bg-custom text-white" }
                 %i{ class: "fa fa-hashtag" }
-                %h3{ class: "m-b-10" } Longest Read
-                %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
+                %h3{ class: "m-b-10" }Longest Read
+                %p{ class: "text-uppercase m-b-5 font-13 font-600" } n/a
