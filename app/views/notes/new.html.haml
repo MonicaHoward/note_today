@@ -21,10 +21,11 @@
                   %div{ class: "form-group row" }
                     %label{ class: "col-2 col-form-label" } Note
                     %div{ class: "col-10" }
-                      = f.input :content, class: "form-control", rows: "5"
+                      = f.text_area :content, class: "form-control", rows: "5"
 
-                    %div{ class: "text-right" }
-                      = button_to "Save", class: "tn btn-success waves-light waves-effect"
+                      = button_to "Save", class: "btn btn-success waves-light waves-effect"
+                      = link_to 'cancel', notes_path, class: "btn btn-warning waves-light waves-effect"
+
 
 
 

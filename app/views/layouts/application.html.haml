@@ -26,14 +26,14 @@
 
           %div{ class: "user-box"}
             %div{ class: "user-img"}
-              %img{ src: "", alt: "user-img", title: "User Name", class: "rounded-circle img-fluid" }
-            %h5 Hello, There
-            %p Admin Head
+              %img{ src: "https://image.flaticon.com/icons/png/512/942/942752.png", alt: "user-img", title: "User Name", class: "img-fluid" }
+            %h5 Hello!
+            %p Welcome to Your Admin Panel
 
           %div{ id: "sidebar-menu"}
             %ul{ class: "metismenu", id: "side-menu" }
               %li
-                %a{ href: "application.html.haml" }
+                %a
                   %i{ class: "fa fa-desktop"}
                   %span{ class: "badge badge-danger badge-pill pull-right" }
                   %span Dashboard
@@ -52,44 +52,17 @@
 
         %li{ class: "dropdown notification-list" }
           %a{ class: "nav-link dropdown-toggle nav-user", role: "button"}
-            %img{ src: "#", alt: "user", class: "rounded-circle" }
+            %img{ src: "https://image.flaticon.com/icons/svg/149/149452.svg", alt: "user", class: "rounded-circle" }
               %span{ class: "ml-1"} You're logged in!
               %i{ class: "fa fa-chevron-down" }
           %div{ class: "dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown" }
-
-            %div{ class: "dropdown-item noti-title" }
-              %h6{ class: "text-overflow m-0" } Welcome!
-
+            %div{class: "dropdown-item noti-title"}
+            %h6{ class: "text-overflow m-0" } Welcome!
             %a{ class: "dropdown-item notify-item" }
               %i{ class: "fa fa-power-off" }
               %span Logout
-  %div{ class: "content" }
-    %div{ class: "container-fluid" }
-      %div{ class: "row" }
-        %div{ class: "col-12" }
-          %div{class: "card-box" }
-            %h4{ class: "header-title mb-4" } Account Overview
-            %div{ class: "row text-center" }
-              %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
-                %div{ class: "card-box widget-flat border-custom bg-custom text-white" }
-                  %i{ class: "fa fa-hashtag" }
-                  %h3{ class: "m-b-10" } Total Notes
-                  %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
-              %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
-                %div{ class: "card-box bg-primary widget-flat border-primary text-white" }
-                  %i{ class: "fa fa-hashtag" }
-                  %h3{ class: "m-b-10" } Total Word Count
-                  %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
-              %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
-                %div{ class: "card-box widget-flat border-success bg-success text-white" }
-                  %i{ class: "fa fa-hashtag" }
-                  %h3{ class: "m-b-10" } Most Words
-                  %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
-              %div{ class: "col-sm-6 col-lg-6 col-xl-3" }
-                %div{ class: "card-box widget-flat border-custom bg-custom text-white" }
-                  %i{ class: "fa fa-hashtag" }
-                  %h3{ class: "m-b-10" } Longest Read
-                  %p{ class: "text-uppercase m-b-5 font-13 font-600" } N/A
+
+
 
   = yield
 
