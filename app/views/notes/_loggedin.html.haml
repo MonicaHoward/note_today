@@ -6,11 +6,22 @@
       %li{ class: "dropdown notification-list" }
         %a{ class: "nav-link dropdown-toggle nav-user", role: "button", "data-toggle" => "dropdown", href: "#", role: "button", "aria-haspopup" => "false", "aria-expanded" => "false"}
           %img{ src: "https://image.flaticon.com/icons/svg/149/149452.svg", alt: "user", class: "rounded-circle" }
-            %span{ class: "ml-1"} You're logged in!
-            %i{ class: "fa fa-chevron-down" }
-        %div{ class: "dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown" }
-          %div{class: "dropdown-item noti-title"}
-          %h6{ class: "text-overflow m-0" } Choose an option
-          %a{ class: "dropdown-item notify-item" }
-            %i{ class: "fa fa-power-off" }
-            %span #{link_to "Sign Out", destroy_user_session_path(id: @user_id), method: :delete, scope: "span"}
+            - if current_user
+              %span{ class: "ml-1"} HELLO, #{current_user.email}
+              %i{ class: "fa fa-chevron-down" }
+              %div{ class: "dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown" }
+                %div{class: "dropdown-item noti-title"}
+                  %h6{ class: "text-overflow m-0" } Choose an option
+                %a{ class: "dropdown-item notify-item" }
+                %i{ class: "fa fa-power-off" }
+                %span #{link_to "Sign Out", destroy_user_session_path(id: @user_id), method: :delete, class: "btn btn-warning waves-effect waves-light"}
+            - else
+              %span{ class: "ml-1"} Hello, guest
+              %i{ class: "fa fa-chevron-down" }
+              %div{ class: "dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown" }
+                %div{class: "dropdown-item noti-title"}
+                %h6{ class: "text-overflow m-0" } Choose an option
+                %a{ class: "dropdown-item notify-item" }
+                  %i{ class: "fa fa-power-off" }
+                  %span #{link_to "Sign In", user_session_path,  class: "btn btn-primary waves-effect waves-light"}
+                  %span #{link_to "Sign Up", new_user_registration_path,  class: "btn btn-custom waves-effect waves-light"}
