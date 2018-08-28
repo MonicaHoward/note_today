@@ -17,3 +17,10 @@
 /yarn-error.log
 
 .byebug_history
+
+My additions
+##############
+.idea/*
+/config/secrets.yml
+/config/database.yml
+.env
