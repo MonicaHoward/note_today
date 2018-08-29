@@ -46,6 +46,7 @@
     <orderEntry type="library" scope="PROVIDED" name="capistrano-bundler (v1.3.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano-rails (v1.4.0, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano-rvm (v0.1.2, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capistrano3-puma (v3.1.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.2, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.12.2, RVM: ruby-2.4.1) [gem]" level="application" />
@@ -71,6 +72,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.13.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.5.2, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-scp (v1.2.1, RVM: ruby-2.4.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh (v5.0.2, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.3.1, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.4, RVM: ruby-2.4.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.4.1) [gem]" level="application" />
